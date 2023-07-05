@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Get fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <!-- Link script files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="JS Files/HeadFunc.js"></script>
+    <script src="JS Files/HomeFunc.js"></script>
+    <script src="JS Files/LiveReportFunc.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+    <!-- Link style files -->
+    <link rel="stylesheet" href="CSS Files/HeadStyle.css">
+    <link rel="stylesheet" href="CSS Files/HomeStyle.css">
+    <link rel="stylesheet" href="CSS Files/ToggleSwitchStyle.css">
+    <link rel="stylesheet" href="CSS Files/LiveReportStyle.css">
+    <link rel="stylesheet" href="CSS Files/AboutStyle.css">
+
+    <title>Crypto Info</title>
+    <!-- Get Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/Favicon.png">
+</head>
+
+<body>  
+    <!-- Modal from Bootstrap to choose the coins -->
+    <div class="modal fade"  tabindex="-1" aria-labelledby="chooseCoinsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" id="chooseCoinsModal">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="chooseCoinsModalLabel">Choose your coins</h1>              
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalBody"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="saveButton" class="btn btn-warning" data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Head     -->
+    <div id="head">
+      <!-- Design the head with images and colors -->
+      <div id="imageContain">
+          <div class="innerImage"></div>
+          <div class="innerImage"></div>
+          <div class="innerImage"></div>
+          <div class="innerImage"></div>
+          <div class="innerImage"></div>
+          <div class="innerImage"></div>
+      </div>
+      <h1>
+          <img src="images/Favicon2.png" id="logo">
+          Crypto 
+          <span id="yellowText">Info</span>
+      </h1> 
+
+      <!-- Buttons for change section -->
+      <div id="pagesLinks">
+        <div id="buttons">
+          <button type="button" class="btn btn-outline-secondary sectionButtons" data-section="home">Home</button>
+          <button type="button" class="btn btn-outline-secondary sectionButtons" data-section="liveReport">Live-Report</button>
+          <button type="button" class="btn btn-outline-secondary sectionButtons" data-section="about">About</button>                        
+        </div>
+        <!-- Input search -->
+        <div id="searchArea">
+          <form class="form-inline d-flex justify-content-center md-form form-sm active-2 mt-2">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input id="searchInput" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+              aria-label="Search" >          
+          </form>
+        </div>          
+      </div>           
+      <br>
+      <div id="design">
+          <div id="yellow"></div>
+          <div id="gray"></div>
+      </div>
+    </div>
+
+    <!-- The body of the project - three sections -->
+    <div id="bodyContain" class="container-fluid">
+        <section id="home" class="row">
+        </section>    
+        <section id="liveReport">
+          <!-- The graph-canvas -->
+          <div id="chartContainer">          
+          </div>
+        </section>
+        <section id="about">
+          <!-- The crads of about -->
+          <div id="aboutMeCard" class="card border-warning mb-3">
+            <!-- First card - about me -->
+            <h3><strong>About Me</strong> </h3>
+            <img src="images/michal.jpg" class="card-img-top cardImage">
+            <div class="card-body">              
+              <h3 class="card-title">Michal Shenkar</h3>
+              <p class="card-text">Hello,<br>
+                I'm Michal Shenkar, a Fullstack developer.<br>
+                I have a big head, creativity, a developed aesthetic sense and a great orientation towards computers,<br>
+                I like challenges, I like to think, and I like to combine design, graphics and code together into a perfect project.</p>
+            </div>
+          </div>
+          <div id="aboutMyProject" class="card text-bg-warning mb-3">
+            <!-- Second card - about the project -->
+            <h3><strong>About My Project</strong> </h3>
+            <img src="images/project.jpg" class="card-img-top cardImage">
+            <div class="card-body">              
+              <h3 class="card-title">Crypto Info / Feb-2023</h3>
+              <p class="card-text">
+                This project I created inspired by the world of business and commerce.<br>
+                It was important to me to give a pleasing appearance of graphs, diagrams and more.<br>
+                I used the colors of gold and metal and created for each coin a card with a unique background for it.<br>
+                I also used these colors at the head of the page,<br>
+                using alternating images from the world of coins and gold.<br>
+                The dynamism is important to me, so I used random backgrounds for the cards,<br>
+                and alternating images.<br>
+                I also created the report page using updated graphs,<br>
+                and the general colors of the project.<br>
+                Hope you enjoyed it.
+              </p>
+            </div>
+          </div>
+        </section>
+    </div>
+
+
+    
+
+</body>
+</html>

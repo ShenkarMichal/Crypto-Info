@@ -1,0 +1,163 @@
+#home{
+    height: 100vh;
+}
+/* Design the cards of the coins */
+.card{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-blend-mode:multiply;    
+    width:19.4vw;
+    padding: 2vw ;
+    margin: 0.2vw;
+    font-family: 'Alegreya Sans', sans-serif;  
+}
+
+h4{
+    font-weight: bold;
+    font-size: 3vw;
+    margin-bottom: -0.5vw;
+    text-shadow: -1px 0px 6px  rgba(255, 192, 1, 1);
+    color: rgb(69, 69, 69);
+}
+
+/* Design the "more-info" */
+.moreInfoButton{
+    background-color: white;    
+}
+
+.moreInfoArea{
+    border: 0.5px solid rgb(255, 255, 255);
+    color: white;
+    border-radius: 10px;
+    height:fit-content;
+    background-color: rgb(69, 69, 69);
+    padding: 0.2vw;
+    width:max-content;
+}
+
+.priceSymbol{
+    width: 2vw;
+}
+
+.priceSpan{
+    display: inline-block;
+    padding: 1vw;
+}
+
+/* Design the progress-bar when loading the more-info */
+.loader {
+    width: 20em;
+    height: 20em;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader .face {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    animation: animate 3s linear infinite;
+}
+
+.loader .face:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    color: gold;
+    border-color: currentColor transparent transparent currentColor;
+    border-width: 0.2em 0.2em 0em 0em;
+    --deg: -45deg;
+    animation-direction: normal;
+}
+
+.loader .face:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    color:rgb(144, 143, 143);
+    border-color: currentColor currentColor transparent transparent;
+    border-width: 0.2em 0em 0em 0.2em;
+    --deg: -135deg;
+    animation-direction: reverse;
+}
+
+.loader .face .circle {
+    position: absolute;
+    width: 50%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: rotate(var(--deg));
+    transform-origin: left;
+}
+
+.loader .face .circle::before {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2em,
+                0 0 4em,
+                0 0 6em,
+                0 0 8em,
+                0 0 10em,
+                0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+
+@keyframes animate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* Design the choose-coins-modal  */
+.modal-title{
+    align-items: center !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.chooseCoinsList{
+    display: inline-block;
+    align-content: center;
+    margin: 1vw;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 426px) {
+    #home{
+        display: inline-block;
+        align-content: center;
+        padding:0 15px;
+        
+    }
+
+    .card{
+        display: inline-block;
+    }
+
+}
+
+@media (max-width: 425px) {
+    #home{
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        padding: 0 15px;
+        
+    }
+
+    .card{
+        display: inline-block;
+        width: 100%;
+    }    
+}
+
+

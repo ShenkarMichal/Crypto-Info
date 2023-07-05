@@ -1,0 +1,64 @@
+/* This is external-file of css to style toggle-switch-button */
+
+.switch input{
+  display: none;
+}
+
+.switch{
+  display: inline-block;
+  width: 40px; /*=w*/
+  height: 20px; /*=h*/
+  margin: 1vw;
+  transform: translateY(25%);
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.slider:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #777;
+  border-radius: 15px;
+  transform: translateX(-15px); /*translateX(-(w-h))*/
+  transition: 0.4s;
+}
+
+input:checked + .slider:before{
+  transform: translateX(15px); /*translateX(w-h)*/
+  background-color: limeGreen;
+}
+
+input:checked + .slider{
+  box-shadow: 0 0 0 2px limeGreen, 0 0 8px limeGreen;
+}
+
+.switch200 .slider:before{
+  width: 100%;
+  transform: translateX(-41px); /*translateX(-(w-h))*/
+}
+
+.switch200 input:checked + .slider:before{
+  background-color: rgb(255,192,1);
+}
+
+.switch200 input:checked + .slider{
+  box-shadow: 0 0 0 2px rgb(255,192,1), 0 0 8px rgb(255,192,1);
+}
+

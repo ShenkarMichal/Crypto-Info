@@ -1,0 +1,34 @@
+.cardImage{
+    width: 10vw;
+}
+
+#aboutMyProject, #aboutMeCard{
+    width: 45VW;
+    height: 70vh;
+    overflow: hidden;
+    display: inline-block;
+    padding: 1vw;
+    margin: 1vw;    
+}
+
+#about{    
+    padding: 0px 1vw;
+    align-content: center;
+    height: 100vh;
+    vertical-align: top;
+}
+
+/* Responsive design */
+@media (max-width: 425px) {
+    #aboutMyProject, #aboutMeCard{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: fit-content;
+    }
+
+    #about{
+        padding: 1vw;
+        height: 100%;
+    }
+}

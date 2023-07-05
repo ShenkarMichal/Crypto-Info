@@ -1,0 +1,170 @@
+body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    align-content: center;    
+}
+
+#head{
+    width:fit-content;
+    display:contents;    
+}
+
+#imageContain{
+    border-top:6px black;
+    border-top-style:double;
+    border-top-color: rgb(144, 143, 143);    
+    rotate: 225deg;
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    right: -16vw;
+    top:-26vw;
+    z-index: 1;    
+}
+
+.innerImage{
+    width: 16vw;
+    height: 16vw;
+    background-size: contain;           
+    transition: 3s;
+    display: inline-block;  
+    z-index: 1;     
+}
+
+#design{
+    rotate: 225deg;
+    width: 20vw;
+    height: 10vw;
+    border-bottom: 1px solid black;
+    position: absolute;
+    left: -10vw;
+    top: 20vw;
+}
+
+#yellow{
+    background-color: rgb(255,192,1) ;
+    width:20vw ;
+    height: 7vw;
+}
+
+#gray{
+    background-color: rgb(80, 78, 78) ;
+    width:20vw ;
+    height: 3vw;
+}
+
+#bodyContain{
+    margin-top: 3vw;
+    margin-left: -0.5vw;
+    padding-left: 0.5vw;
+    width: 110vw;    
+    z-index: 999;
+    background-color: rgb(144, 143, 143);
+    position: relative;
+}
+
+section{
+    background-color: rgb(144, 143, 143);
+    width: 100%;
+}
+
+#logo{
+    position: absolute;
+    top: 1vw;
+    left: 40vw;
+    width: 8vw;
+}
+
+h1{
+    font-size: 8vw !important;
+    font-weight: bolder;
+    letter-spacing: 0.2vw;
+    color:  rgb(80, 78, 78) ;
+    padding-left: 25vw;
+    padding-top: 8vw;
+    position: relative;
+    font-family: 'Alegreya Sans', sans-serif !important;
+    margin-bottom: 0px;
+    margin-top: 5vw;
+}
+
+#yellowText{
+    color: rgb(255,192,1) !important ;
+}
+
+#pagesLinks{
+    position: absolute;   
+    right: 30vw;
+    margin-top: -1vw;
+    z-index: 1000;
+    display: flex;
+}
+
+.sectionButtons{
+    margin-right: 0.7vw;
+}
+
+/* Design the search input */
+.active-2 input.form-control{
+    border:0px solid white;
+    border-bottom: 1px solid rgb(144, 143, 143);
+}
+
+.active-2 input.form-control[type=text]:focus:not([readonly]) {
+    border:0px solid white;
+    border-bottom: 1px solid rgb(255,192,1);
+    box-shadow: 0 1px 0 0 rgb(255,192,1);
+}
+
+.active-2 .fa {
+    color:rgb(255,192,1);      
+}
+
+/* Responsive Design */
+@media (max-width: 425px) {
+    #imageContain > .innerImage{
+        display: none;
+    }
+
+    #imageContain{
+        background-color: rgb(255,192,1);
+    }
+
+    .sectionButtons{
+        width: fit-content;
+        font-size: small;
+        padding: 0;
+        display: flex;
+        gap: 20%;
+        margin: 5px;
+        margin-left: 10px; 
+        background-color: white;
+    }
+
+    #pagesLinks{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        position: absolute;
+        left: 2vw;
+    }
+
+    #searchArea{
+        width: 30vw;
+        position: absolute;
+        right: 2vw;
+    }
+
+    #head{
+        display: flex;
+        margin-top: 10px;
+        height: 22vw;
+    }
+}
+
+
+
+
+
