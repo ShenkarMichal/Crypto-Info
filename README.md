@@ -20,6 +20,3 @@ The user can choose only 5 coins to followo:
 Search:
 ![search](https://github.com/ShenkarMichal/Crypto-Info/assets/120050118/1795c95c-aff9-402e-9443-01b073646a4e)
 
-About me and about the project:
-![about](https://github.com/ShenkarMichal/Crypto-Info/assets/120050118/222bfdd5-ab44-401c-a465-1fae85917136)
-
